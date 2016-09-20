@@ -1,4 +1,4 @@
-# js-map-reduce
+# js-map-filter-reduce
 Learning map and reduce in JavaScript
 
 ## Map
@@ -40,6 +40,28 @@ console.log(filtered); // [2, 3]
 [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
 ## Reduce
+
+ยากจัง!!! ได้ยินจากชื่อ นึกถึง ลดละ อะไรบางอย่าง ยุบรวม ประมาณนี้
+
+- เข้าถึง Element array แต่ละตัว แล้วกระทำตาม logic ที่กำหนด สะสมข้อมูลไปเรื่อยๆ โดยปกติจะวิ่งผ่าน Element array จาก ซ้าย-ขวา
+- แล้วนำข้อมูลที่สะสม แสดงออกมาเป็น ค่าเดียว
+
+```
+// ตัวอย่างใช้ reducer เพื่อทำการ sum ข้อมูลใน array
+const number = [0, 1, 2, 3];
+
+// method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
+var result = number.reduce(function (previousValue, currentValue, currentIndex, array) {
+    console.log(previousValue);
+    console.log(currentValue);
+    console.log(currentIndex);
+
+    return previousValue + currentValue;
+});
+
+console.log(result);    // 6
+```
+
 [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 ## Reference
