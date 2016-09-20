@@ -22,6 +22,23 @@ console.log(resultMyNumber); // [2, 4, 6]
 
 [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
+## Filter
+- คัดกรอง Element array ที่พิจารณาอยู่ ผ่าน call back function เมื่อเสร็จสิ้น ให้สร้าง new array ขึ้นมา
+- การใช้งาน filter เป็น immutable เช่นกัน คือ ไม่ยุ่ง หรือ สร้าง side effect ให้ state ปัจจบุัน แจ่มจริงๆ
+
+```
+const number = [1, 2, 3];
+
+var filtered = number.filter(function (i) {
+    return i > 1;
+});
+
+console.log(number);    // [1, 2, 3]
+console.log(filtered); // [2, 3]
+```
+
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
 ## Reduce
 [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
